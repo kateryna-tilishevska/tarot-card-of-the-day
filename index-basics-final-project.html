@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🔮Card of the day</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: radial-gradient(circle at 10% 20%, rgb(248, 219, 219) 0%, rgb(229, 248, 250) 90%);
+        }
+
+        h1 {
+            text-align: center;
+            color: #7c73e6;
+            font-family: 'Acme', sans-serif;
+            text-shadow: 2px 2px 3px #867fd1, 0 0 1em rgb(238, 168, 222), 0 0 0.2em rgb(213, 141, 237);
+        }
+
+        h2 {
+            text-align: center;
+            color: #713c91;
+            border: 1px solid #665eb9;
+            font-family: 'Acme', sans-serif;
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 20px;
+
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        p {
+            line-height: 1.5;
+            font-size: 15px;
+            margin: 20px 0 10px;
+            font-family: 'Acme', sans-serif;
+            text-align: justify;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            margin-top: 15px;
+            background: #665eb9;
+            color: #ffe9e3;
+            font-size: 24px;
+            border: 30px 20px;
+            border: none;
+            border-radius: 6px;
+            padding: 15px 20px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            transition: all 200ms ease-in-out;
+            font-family: 'Acme', sans-serif;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            cursor: pointer;
+            background: #ffe9e3;
+            color: #665eb9;
+        }
+
+        .my-name {
+            font-family: "Sofia", sans-serif;
+            font-weight: bold;
+            text-align: center;
+            color: rgb(181, 54, 183);
+            font-size: 20px;
+        }
+
+        .learn-more {
+            display: block;
+            text-decoration: none;
+            color: #574fa8;
+            font-size: 15px;
+            font-family: "Sofia", sans-serif;
+        }
+
+        .learn-more:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            font-size: 13px;
+            color: rgb(80, 68, 68);
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px 60px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .key-word {
+            color: #7c73e6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            Card of the day
+        </h1>
+        <p class="my-name">
+            from Katherine
+        </p>
+        <h2>
+            ✨ Choose a card and see what today brings you ✨
+        </h2>
+        <hr>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/045/202/original/tarot-3-cards.jpg?1662060460"
+            alt="Card of the day" width="500" />
+        <p>
+            <em>Would you like to have a guideline for your day? How it will be? What should you expect and what to
+                avoid?</em>
+            <br>
+            <br>
+            Your
+            <span class="key-word">
+                <strong>Card of a day</strong>
+            </span>
+            is a perfect choice! You may pick your daily Tarot card and I'll send you a
+            full description to your email.
+        </p>
+        <p>
+            What do we know about Tarot? he Tarot is a symbolic map of consciousness that encompasses our journey
+            through life, both spiritually and practically. It is the very popular fortune telling way in astrology.
+            Tarot reading is the practice of divining wisdom and guidance through a specific spread (or layout) of Tarot
+            cards.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Tarot" target="_blank" class="learn-more">
+            Learn more on Wikipedia
+        </a>
+        <br>
+        <a href="https://www.instagram.com/katherine.of.swords/" target="_blank" class="learn-more">
+            Check my Instagram for more Tarot activities
+        </a>
+
+        <button class="choose-button">
+            🀧 Choose your card!
+        </button>
+        <p class="footer">
+            This page was built by
+            <a href="https://www.instagram.com/katherine.of.swords/" target="_blank" class="footer">
+                Kateryna Tilishevska
+            </a>
+        </p>
+    </div>
+    <script>
+        function choose() {
+            let name = prompt("What is your name?");
+            let email = prompt("What is your email address?");
+            let card = prompt("Please, choose a card you like and write a number from 1 to 3 (from left to right)");
+
+            if (card === "1") {
+                alert(name + ", your card of the day is The Fool! New excited beginning is waiting for you! For more information, please, check your email😉");
+            }
+            else if (card === "2") {
+                alert(name + ", your card of the day is The Magician! Today will bring a success for you! For more information, please, check your email😉");
+            }
+            else {
+                alert(name + ", your card of the day is The High Priestess! Some secrets will be uncovered! For more information, please, check your email😉");
+            }
+        }
+
+        let chooseButton = document.querySelector(".choose-button");
+        chooseButton.addEventListener("click", choose);
+    </script>
+</body>
+
+</html>
